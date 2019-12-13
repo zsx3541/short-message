@@ -1,0 +1,25 @@
+{
+  "name": "shuzu/short-message",
+  "type": "library",
+  "version":"1.0.0.",
+  "description": "",
+  "require-dev": {
+    "phpunit/phpunit": "^5.7"
+  },
+  "authors": [
+    {
+      "name": "zengshaoxiong",
+      "email": "zengshaoxiong@shuzutech.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Shuzu\\ShortMessage\\": "src/"
+    }
+  },
+  "require": {
+    "shuzu/open-common": "dev-master",
+    "guzzlehttp/guzzle": "^6.5",
+    "ext-json": "*"
+  }
+}
