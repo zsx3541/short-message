@@ -12,6 +12,7 @@ namespace Shuzu\ShortMessage;
 use Shuzu\Common\exception\ShuzuApplicationException;
 use Shuzu\Common\ShuzuCommonApplication;
 use Shuzu\ShortMessage\Request\SendMessageRequest;
+use Shuzu\ShortMessage\Request\SendResultRequest;
 use Shuzu\ShortMessage\Response\SendMessageResponse;
 
 class ShortMessageAppliction extends ShuzuCommonApplication
@@ -38,6 +39,18 @@ class ShortMessageAppliction extends ShuzuCommonApplication
         $resp->setTaskId($json_resp['data']['taskId']);
 
         return $resp;
+    }
+
+    public function queryMessageResult(SendResultRequest $sendResultRequest){
+        $fullUrl = rtrim($this->smsUrl,'/') . "/sms-center/sms/getSmsResult";
+        $json_resp = $this->doPostJson($fullUrl,$sendResultRequest);
+
+        if($json_resp['code'] !== '00000000'){
+            throw new ShuzuApplicationException($json_resp['description']);
+        }
+
+        return $json_resp['data'];
+
     }
 
 
