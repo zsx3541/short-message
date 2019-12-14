@@ -6,10 +6,12 @@
  * Time: 19:33
  */
 
-namespace Shuzu\ShortMessage\request;
+namespace Shuzu\ShortMessage\Request;
 
 
-class SendMessageRequest
+use Shuzu\Common\Request\BaseRequest;
+
+class SendMessageRequest extends BaseRequest
 {
     public $enterpriseId;
     public $mobiles;

@@ -6,7 +6,7 @@
  * Time: 19:33
  */
 
-namespace Shuzu\ShortMessage\response;
+namespace Shuzu\ShortMessage\Response;
 
 
 class SendMessageResponse
