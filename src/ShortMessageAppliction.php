@@ -9,7 +9,7 @@
 namespace Shuzu\ShortMessage;
 
 
-use Shuzu\Common\exception\ShuzuApplicationException;
+use Shuzu\Common\Exception\ShuzuApplicationException;
 use Shuzu\Common\ShuzuCommonApplication;
 use Shuzu\ShortMessage\Request\SendMessageRequest;
 use Shuzu\ShortMessage\Request\SendResultRequest;
